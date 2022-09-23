@@ -1,50 +1,42 @@
-/* Resets the box size of every element */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: darkcyan;
-    font-family:Candara, ;
-  }
-  
-  /* Gives the body element a parent height to compare against */
-  html {
-    height: 100%;
-  }
-  
+:root {
+  --main: darkcyan;
+  --accent:rgb(231, 145, 154);
+  --text: #b9c6ae;
+}
+
   body {
-    min-height: 100%;
-    line-height: 1;
-    
+    background-color: var(--main);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
-  h1 {
-    font-size: 500%;
-  } 
-  h2 {
-    font-size: 400%;
-  } 
-  h3 {
-    font-size: 300%;
-  }
-  h4 {
-    font-size: 200%;
-  }
-  h5 {
-    font-size: 150%;
-  } 
-  h6 {
-    font-size: 100%;
-  }
-  
-  /* Matches the font of special elements to the rest of the page */
-  input, select, option, optgroup, textarea, button,
-  pre, code {
-    font-size: 100%;
-    font-family: inherit;
-  }
-  
-  /* Removes default bullet points from lists */
-  ol, ul {
-    list-style: none;
-  }
+nav {
+  background-color: var(--accent);
+  text-align: center;
+  margin: 2px;
+  padding: 2px;
+  height: 30vh;
+  min-height: 400px;
+}
+h1 {
+  font-size: xx-large;
+}
+h2 {
+  font-size: large;
+}
+figure img {
+  height: 25vh;
+  min-height: 200px;
+  border: 1vh solid var(--text);
+}
+main {
+  min-height: 60vh;
+}
+section ul{
+  list-style: none;
+  display: ;
+}
+footer {
+  height: 10vh;
+  background-color: var(--accent);
+  min-height: 50px;
+}
