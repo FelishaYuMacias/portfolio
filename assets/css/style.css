@@ -3,10 +3,14 @@
   --accent:rgb(231, 145, 154);
   --text: #b9c6ae;
 }
-
+*{
+  box-sizing: border-box;
+  text-align: center;
+}
   body {
     background-color: var(--main);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
   }
   
 nav {
@@ -22,6 +26,7 @@ h1 {
 }
 h2 {
   font-size: large;
+  
 }
 figure img {
   height: 25vh;
@@ -31,12 +36,22 @@ figure img {
 main {
   min-height: 60vh;
 }
-section ul{
+ul li {
+  justify-content: space-around;
   list-style: none;
-  display: ;
+  text-align: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  border: dashed 0.5px rgb(10, 15, 1);
+  
 }
 footer {
   height: 10vh;
   background-color: var(--accent);
   min-height: 50px;
+}
+main section {
+  border: dashed 1px var(--text);
+  min-height: 20vh;
 }
