@@ -5,12 +5,12 @@
 }
 *{
   box-sizing: border-box;
-  text-align: center;
+  /* display: inline; */
 }
   body {
     background-color: var(--main);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: block;
+    display: inline-block;
   }
   
 nav {
@@ -26,7 +26,6 @@ h1 {
 }
 h2 {
   font-size: large;
-  
 }
 figure img {
   height: 25vh;
@@ -43,7 +42,7 @@ ul li {
   display: inline-flex;
   flex-wrap: wrap;
   padding: 5px;
-  border: dashed 0.5px rgb(10, 15, 1);
+  /* border: dashed 0.5px rgb(10, 15, 1); */
   
 }
 footer {
@@ -52,6 +51,95 @@ footer {
   min-height: 50px;
 }
 main section {
-  border: dashed 1px var(--text);
+  /* border: dashed 1px var(--text); */
   min-height: 20vh;
 }
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--text);
+  padding: 10px;
+  float:top;
+  width: 30%;
+  flex-wrap: wrap;
+}
+
+.card header {
+  padding: 20px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  max-width: 25vh;
+  min-width: 200px; 
+
+.work {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--text);
+  padding: 10px;
+  float:top;
+  width: 30%;
+  flex-wrap: wrap;
+}
+
+.work header {
+  padding: 20px;
+}
+
+.work p {
+  text-align: center;
+}
+
+.work img {
+  width: 100%;
+  max-width: 25vh;
+  min-width: 200px;
+}
+
+/* Cards are split into two columns at 992px or smaller */
+@media screen and (max-width: 992px) {
+  .card {
+    width: 50%;
+  }
+  /* Change the header color */
+  /* header {
+    background: #772014;
+  } */
+}
+
+/* Cards are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+  /* Change the header color */
+  /* header {
+    background: #8ac4ff;
+  } */
+}
+/* works are split into two columns at 992px or smaller
+@media screen and (max-width: 992px) {
+  .work {
+    width: 50%;
+  }
+  /* Change the header color */
+  /* header {
+    background: #772014;
+  } */
+}
+
+/* works are stacked on top of each other at 768px or smaller */
+@media screen and (max-width: 768px) {
+  .work {
+    width: 100%;
+  }
+  /* Change the header color */
+  /* header {
+    background: #8ac4ff;
+  } */
+} */
