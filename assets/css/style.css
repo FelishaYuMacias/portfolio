@@ -47,7 +47,7 @@ section img {
   min-width: 200px;
 }
 
-.work {
+.work, .thumbnail {
   border-style: solid;
   border-width: 1px;
   padding: 10px;
@@ -55,18 +55,28 @@ section img {
   width: 25%;
 }
 
-.work header {
+.work header, .thumbnail header {
   padding: 20px;
 }
 
-.work p {
-  text-align: center;
-}
-
-.work img {
+.work img, .thumbnail img {
   width: 100%;
 }
 
+/* this is to make first work image larger */
+.thumbnail { 
+  top:-50px; 
+  left:-35px; 
+  display:inline-block; 
+  z-index:999; 
+  cursor: pointer; 
+  } 
+  
+  /*change the number below to scale to the appropriate size*/ 
+  .thumbnail:hover { 
+  transform: scale(1.5); 
+  
+  }
 /* Cards are split into two columns at 992px or smaller */
 @media screen and (max-width: 992px) {
   .work {
