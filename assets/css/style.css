@@ -10,7 +10,7 @@
   body {
     background-color: var(--main);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: inline-block;
+    /* display: inline-block; */
   }
   
 nav {
@@ -51,10 +51,10 @@ footer {
   min-height: 50px;
 }
 main section {
-  /* border: dashed 1px var(--text); */
+  border: solid 2px var(--text);
   min-height: 20vh;
 }
-.card {
+/* .card {
   border-style: solid;
   border-width: 1px;
   border-color: var(--text);
@@ -76,16 +76,18 @@ main section {
   width: 100%;
   max-width: 25vh;
   min-width: 200px; 
+} */
 
-.work {
-  border-style: solid;
+.work {  border-style: solid;
   border-width: 1px;
-  border-color: var(--text);
+  border-color: var(--accent);
   padding: 10px;
+  margin: 2px;
   float:top;
   width: 30%;
   flex-wrap: wrap;
 }
+
 
 .work header {
   padding: 20px;
@@ -102,7 +104,7 @@ main section {
 }
 
 /* Cards are split into two columns at 992px or smaller */
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   .card {
     width: 50%;
   }
@@ -110,28 +112,28 @@ main section {
   /* header {
     background: #772014;
   } */
-}
 
 /* Cards are stacked on top of each other at 768px or smaller */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .card {
     width: 100%;
-  }
+  } */
   /* Change the header color */
   /* header {
     background: #8ac4ff;
   } */
-}
-/* works are split into two columns at 992px or smaller
+/* } */
+
+/* works are split into two columns at 992px or smaller*/
 @media screen and (max-width: 992px) {
-  .work {
+   .work {
     width: 50%;
   }
-  /* Change the header color */
-  /* header {
+   /* Change the header color
+   header {
     background: #772014;
-  } */
-}
+  }  */
+} 
 
 /* works are stacked on top of each other at 768px or smaller */
 @media screen and (max-width: 768px) {
