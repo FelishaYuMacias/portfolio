@@ -1,171 +1,186 @@
 :root {
-    --main: darkcyan;
-    --accent:rgb(231, 145, 154);
-    --text: #b9c6ae;
-  }
-  *{
-    box-sizing: border-box;
-    /* display: inline; */
-  }
-    body {
-      background-color: var(--main);
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      /* display: inline-block; */
-    }
-    
+  --main: darkcyan;
+  --accent:rgb(231, 145, 154);
+  --heading: grey;
+  --text: #eef3ea;
+}
+* {
+  box-sizing: border-box;
+  display:flexbox;
+}
+
+body {
+  background-color: var(--main);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+nav {
+  background-color: var(--accent);
+  text-align: center;
+  margin: 2px;
+  padding: 2px;
+  height: 30vh;
+  min-height: 450px;
+  min-width: 100%;
+  
+}
+main {
+  min-height: 800px;
+}
+main section {
+  border: solid 2px var(--text);
+  min-height: 20vh;
+}
+
+figure img {
+  height: 30vh;
+  min-height: 300px;
+  border: 1vh solid var(--text);
+}
+ul li {
+  justify-content: space-around;
+  list-style: none;
+  text-align: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background: var(--heading);
+  color: var(--text);
+}
+
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--text);
+  padding: 10px;
+  float:top;
+  width: 100%;
+  flex-wrap: wrap;
+  min-height: fit-content;
+}
+
+.card header {
+  padding: 20px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img, .work img {
+  width: 100%;
+  max-width: 100vh;
+  min-width: 200px; 
+}
+
+.work {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  float: left;
+  width: 24%;
+  min-height:250px;
+}
+
+.work header {
+  padding: 20px;
+  min-width: 200px;
+}
+
+.larger header {
+  padding: 20px;
+  min-width: 300px
+}
+
+.larger {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  float: left;
+  width: 28%;
+  min-height: 300px;
+}
+
+.larger img {
+  width: 100%;
+  min-width: 300px; 
+}
+
+footer {
+  height: 10vh;
+  background-color: var(--accent);
+  min-height: 50px;
+  border: solid 1px var(--text);
+  min-width: 100%;
+
+}
+
+footer ul li {
+text-align: end;
+}
+
+/* Cards are split into two columns at 992px or smaller. Header, main, and footer sections stay correctly stylized. */
+@media screen and (max-width: 992px) {
   nav {
     background-color: var(--accent);
     text-align: center;
     margin: 2px;
     padding: 2px;
     height: 30vh;
-    min-height: 400px;
-  }
-  h1 {
-    font-size: xx-large;
-  }
-  h2 {
-    font-size: large;
-  }
-  figure img {
-    height: 25vh;
-    min-height: 200px;
-    border: 1vh solid var(--text);
-  }
-  main {
-    min-height: 60vh;
-  }
-  ul li {
-    justify-content: space-around;
-    list-style: none;
-    text-align: center;
-    display: inline-flex;
-    flex-wrap: wrap;
-    padding: 5px;
-    /* border: dashed 0.5px rgb(10, 15, 1); */
+    min-height: 450px;
+    min-width: 100%;
+    z-index: 3;
     
+   }
+  main {
+    min-height: 1300px;
   }
+  .work, .larger {
+    width: 50%;
+  }
+  /* Change the header color */
+  header {
+    background: rgb(120, 8, 151);
+  }
+}
+footer {
+  height: 10vh;
+  background-color: var(--accent);
+  min-height: 50px;
+  border: solid 1px var(--text);
+  min-width: 100%;
+}
 
-    .card {
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--text);
-    padding: 10px;
-    float:top;
-    width: 30%;
-    flex-wrap: wrap;
+/* Cards are stacked on top of each other at 768px or smaller. Header, main, and footer sections stay correctly stylized. */
+@media screen and (max-width: 768px) {
+ nav {
+  background-color: var(--accent);
+  text-align: center;
+  margin: 2px;
+  padding: 2px;
+  height: 30vh;
+  min-height: 600px;
+  min-width: 100%; 
+ }
+  main {
+    min-height: 3400px;
   }
-  
-  .card header {
-    padding: 20px;
-  }
-  
-  .card p {
-    text-align: center;
-  }
-  
-  .card img {
+  .work, .larger, .card {
     width: 100%;
-    max-width: 25vh;
-    min-width: 200px; 
   }
-  footer {
-    height: 10vh;
-    background-color: var(--accent);
-    min-height: 50px;
+  /* Change the header color */
+  header {
+    background: pink;
   }
-  main section {
-    border: solid 2px var(--text);
-    min-height: 20vh;
-  }
-  .card {
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--text);
-    padding: 10px;
-    float:top;
-    width: 30%;
-    flex-wrap: wrap;
-  }
-  
-  .card header {
-    padding: 20px;
-  }
-  
-  .card p {
-    text-align: center;
-  }
-  
-  .card img {
-    width: 100%;
-    max-width: 25vh;
-    min-width: 200px; 
-  }
-  
-  .work {  border-style: solid;
-    border-width: 1px;
-    border-color: var(--accent);
-    padding: 10px;
-    margin: 2px;
-    float:top;
-    width: 30%;
-    flex-wrap: wrap;
-  }
-  
-  
-  .work header {
-    padding: 20px;
-  }
-  
-  .work p {
-    text-align: center;
-  }
-  
-  .work img {
-    width: 100%;
-    max-width: 25vh;
-    min-width: 200px;
-  }
-  
-  /* Cards are split into two columns at 992px or smaller */
-  /* @media screen and (max-width: 992px) {
-    .card {
-      width: 50%;
-    }
-    /* Change the header color */
-    /* header {
-      background: #772014;
-    } */
-  
-  /* Cards are stacked on top of each other at 768px or smaller */
-  /* @media screen and (max-width: 768px) {
-    .card {
-      width: 100%;
-    } */
-    /* Change the header color */
-    /* header {
-      background: #8ac4ff;
-    } */
-  /* } */
-  
-  /* works are split into two columns at 992px or smaller*/
-  @media screen and (max-width: 992px) {
-     .work {
-      width: 50%;
-    }
-     /* Change the header color
-     header {
-      background: #772014;
-    }  */
-  } 
-  
-  /* works are stacked on top of each other at 768px or smaller */
-  @media screen and (max-width: 768px) {
-    .work {
-      width: 100%;
-    }
-    /* Change the header color */
-    /* header {
-      background: #8ac4ff;
-    } */
-  } 
+}
+footer {
+  height: 10vh;
+  background-color: var(--accent);
+  min-height: 100px;
+  border: solid 1px var(--text)
+}

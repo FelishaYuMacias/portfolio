@@ -20,10 +20,12 @@ nav {
   margin: 2px;
   padding: 2px;
   height: 30vh;
-  min-height: 400px;
+  min-height: 450px;
+  min-width: 100%;
+  
 }
 main {
-  min-height: 100vh;
+  min-height: 800px;
 }
 main section {
   border: solid 2px var(--text);
@@ -32,7 +34,7 @@ main section {
 
 figure img {
   height: 30vh;
-  min-height: 200px;
+  min-height: 300px;
   border: 1vh solid var(--text);
 }
 ul li {
@@ -50,11 +52,7 @@ header {
   background: var(--heading);
   color: var(--text);
 }
-/* section img {
-  width: 100%;
-  max-width: 60vh;
-  min-width: 200px;
-} */
+
 .card {
   border-style: solid;
   border-width: 1px;
@@ -110,7 +108,6 @@ header {
 
 .larger img {
   width: 100%;
-  /* max-width: 100vh; */
   min-width: 300px; 
 }
 
@@ -118,17 +115,30 @@ footer {
   height: 10vh;
   background-color: var(--accent);
   min-height: 50px;
-  border: solid 1px var(--text)
+  border: solid 1px var(--text);
+  min-width: 100%;
+
 }
 
 footer ul li {
 text-align: end;
 }
 
-/* Cards are split into two columns at 992px or smaller */
+/* Cards are split into two columns at 992px or smaller. Header, main, and footer sections stay correctly stylized. */
 @media screen and (max-width: 992px) {
+  nav {
+    background-color: var(--accent);
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+    height: 30vh;
+    min-height: 450px;
+    min-width: 100%;
+    z-index: 3;
+    
+   }
   main {
-    min-height: 200vh;
+    min-height: 1300px;
   }
   .work, .larger {
     width: 50%;
@@ -138,11 +148,27 @@ text-align: end;
     background: rgb(120, 8, 151);
   }
 }
+footer {
+  height: 10vh;
+  background-color: var(--accent);
+  min-height: 50px;
+  border: solid 1px var(--text);
+  min-width: 100%;
+}
 
-/* Cards are stacked on top of each other at 768px or smaller */
+/* Cards are stacked on top of each other at 768px or smaller. Header, main, and footer sections stay correctly stylized. */
 @media screen and (max-width: 768px) {
+ nav {
+  background-color: var(--accent);
+  text-align: center;
+  margin: 2px;
+  padding: 2px;
+  height: 30vh;
+  min-height: 600px;
+  min-width: 100%; 
+ }
   main {
-    min-height: 500vh;
+    min-height: 3400px;
   }
   .work, .larger, .card {
     width: 100%;
@@ -151,4 +177,10 @@ text-align: end;
   header {
     background: pink;
   }
+}
+footer {
+  height: 10vh;
+  background-color: var(--accent);
+  min-height: 100px;
+  border: solid 1px var(--text)
 }
