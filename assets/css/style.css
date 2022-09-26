@@ -127,7 +127,7 @@ text-align: center;
 padding: 0 5%;
 }
 
-/* Cards are split into two columns at 992px or smaller. Header, main, and footer sections stay correctly stylized. */
+/* Resizing to 992px or smaller changes layout. Header, main, and footer sections stay correctly stylized. */
 @media screen and (max-width: 992px) {
   .work, .larger {
     width: 50%;
@@ -149,7 +149,7 @@ padding: 0 5%;
   }
 }
 
-/* Cards are stacked on top of each other at 768px or smaller. Header, main, and footer sections stay correctly stylized. */
+/* Resizing to 768px or smaller changes layout. Header, main, and footer sections stay correctly stylized. */
 @media screen and (max-width: 768px) {
 
   .work, .larger, .card, .work img, .larger img, header {
