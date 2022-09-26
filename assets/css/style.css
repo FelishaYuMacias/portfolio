@@ -22,8 +22,6 @@ body {
   /* "Resets" the margins so the browser doesn't assume a margin and allows more control over the look of the page. */
   position: relative;
   /* Allows specific adjustment of postion of elements and prevents other elements from occupying the space. */
-  padding-bottom: 1000px;
-  /* Temporary fix for spacing issues in Work section. Prevents the footer from overlapping and keeps the page looking nice as it gets resized. */
 }
 nav {
   background-image: linear-gradient(var(--accent), var(--accent), var(--main));
@@ -55,8 +53,8 @@ ul li {
 
 .card {
   padding: 15px;
-  float:top;
   flex-wrap: wrap;
+  display: flex;
   /* Settings for each of my sections (About Me, Work, Contact) */
 }
 
@@ -78,7 +76,6 @@ ul li {
 
 .work {
   padding: 10px;
-  float: left;
   display: inline-flexbox;
   flex-wrap: wrap;
   min-width: 200px;
@@ -130,13 +127,10 @@ padding: 0 5%;
 
 /* Cards are split into two columns at 992px or smaller. Header, main, and footer sections stay correctly stylized. */
 @media screen and (max-width: 992px) {
-  main {
-   padding: 5px;
-  }
   .work, .larger {
     width: 50%;
     min-width: 350px;
-    padding: 10px;
+    padding: 20px;
   }
   .work img, .larger img {
     min-height: 350px;
@@ -149,15 +143,13 @@ padding: 0 5%;
     background: darkslategray;
     width: 50%;
     min-width: 350px;
+
   }
 }
 
 /* Cards are stacked on top of each other at 768px or smaller. Header, main, and footer sections stay correctly stylized. */
 @media screen and (max-width: 768px) {
 
-  main {
-    padding-bottom: 900px;
-  }
   .work, .larger, .card, .work img, .larger img, header {
     width: 100%;
     min-width: 400px;
