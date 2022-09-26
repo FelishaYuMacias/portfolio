@@ -3,54 +3,61 @@
   --accent:rgb(231, 145, 154);
   --heading: grey;
   --text: #eef3ea;
+
+  /* Establishes root colors and settings so that they can be changed across the page more easily. */
+
 }
 * {
   box-sizing: border-box;
+  /* Make the box contain the padding and margins instead of adding to the total box size.  */
   display:flexbox;
+  /* Allows layout to be flexible. */
 }
 
 body {
   background-color: var(--main);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Candara, Perpetua, Calbiri, sans-serif;
+  font-size: 16pt;
   margin: 0;
+  /* "Resets" the margins so the browser doesn't assume a margin and allows more control over the look of the page. */
   position: relative;
+  /* Allows specific adjustment of postion of elements and prevents other elements from occupying the space. */
   padding-bottom: 1000px;
+  /* Temporary fix for spacing issues in Work section. Prevents the footer from overlapping and keeps the page looking nice as it gets resized. */
 }
 nav {
-  background-image: linear-gradient( var(--accent), var(--accent), var(--main));
+  background-image: linear-gradient(var(--accent), var(--accent), var(--main));
   text-align: center;
-  margin: 2px;
   padding: 2px;
   min-width: 100%; 
+  /* Sets the look of my nav bar. */
 }
-main, section {
-  min-height: fit-content;
+nav h1 {
+  font-size: xxx-large;
+  /* Makes my name larger.  */
 }
+
 figure img {
-  height: 30vh;
+  height: 40vh;
   min-height: 300px;
   border: 1vh solid var(--text);
+  /* Settings for my profile image. */
 }
+
 ul li {
-  justify-content: space-around;
   list-style: none;
   text-align: center;
   display: inline-flex;
   flex-wrap: wrap;
-  padding: 5px;
-}
-
-header {
-  padding: 60px;
-  text-align: center;
-  background: var(--heading);
-  color: var(--text);
+  padding: 1vw;
+  /* Settings for my lists. */
 }
 
 .card {
-  padding: 10px;
+  padding: 15px;
   float:top;
   flex-wrap: wrap;
+  /* Settings for each of my sections (About Me, Work, Contact) */
 }
 
 .card header {
@@ -64,8 +71,8 @@ header {
 .card img, .work img, .larger img {
   width: 100%;
   max-width: 100vh;
-  min-height: 350px;
-  min-width: 350px;
+  min-height: 300px;
+  min-width: 300px;
   background-color: var(--main);
 }
 
@@ -77,10 +84,19 @@ header {
   min-width: 200px;
   max-width: 32%;
   height: max-content;
-  
+  /* Settings for my Work section. */
 }
 .work:hover, .larger:hover {
   opacity: 0.60;
+  /* Makes is so when you hover over work images they turn opaque. */
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background: var(--heading);
+  color: var(--text);
+  /* Settings for the headers on my work images. */
 }
 
 .larger {
@@ -91,20 +107,22 @@ header {
   max-width: 100%;
   min-height:200px;
   min-width: 600px;
+  /* Settings for first/larger work image. */
 }
 
 .larger img {
   min-width: 900px;
-
 }
 
 footer {
-  height: 10vh;
-  background-image: linear-gradient(var(--main), var(--accent));
+  background-image: linear-gradient(var(--main), var(--accent), var(--accent));
   min-width: 100%;
   position: absolute;
   bottom: 0;
+  padding: 0 15px;
+  /* Making footer stay at the bottom of the page and fit the look of the page. */
 }
+
 .footer {
 text-align: center;
 padding: 0 5%;
@@ -115,17 +133,22 @@ padding: 0 5%;
   main {
    padding: 5px;
   }
-  .work, .larger, .work img, .larger img, header {
-      width: 50%;
-      min-width: 350px;
+  .work, .larger {
+    width: 50%;
+    min-width: 350px;
+    padding: 10px;
   }
   .work img, .larger img {
     min-height: 350px;
+    width: 50%;
+    min-width: 350px;
   }
  
   /* Change the header color */
   header {
     background: darkslategray;
+    width: 50%;
+    min-width: 350px;
   }
 }
 
@@ -133,12 +156,11 @@ padding: 0 5%;
 @media screen and (max-width: 768px) {
 
   main {
-    padding-bottom: 800px;
+    padding-bottom: 900px;
   }
   .work, .larger, .card, .work img, .larger img, header {
     width: 100%;
     min-width: 400px;
-    padding: 5px;
   }
   /* Change the header color */
   header {
