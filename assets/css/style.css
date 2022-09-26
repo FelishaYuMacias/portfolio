@@ -152,12 +152,21 @@ padding: 0 5%;
 /* Resizing to 768px or smaller changes layout. Header, main, and footer sections stay correctly stylized. */
 @media screen and (max-width: 768px) {
 
-  .work, .larger, .card, .work img, .larger img, header {
+  .work, .larger {
     width: 100%;
-    min-width: 400px;
+    min-width: 300px;
+    padding: 20px;
   }
+  .work img, .larger img {
+    min-height: 300px;
+    width: 100%;
+    min-width: 300px;
+  }
+ 
   /* Change the header color */
-  header {
+  header, .larger header {
+    width: 100%;
+    min-width: 300px;
     background: #0E1717;
   }
   
