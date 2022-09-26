@@ -13,25 +13,19 @@ body {
   background-color: var(--main);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
+  position: relative;
+  padding-bottom: 1000px;
 }
 nav {
-  background-color: var(--accent);
+  background-image: linear-gradient( var(--accent), var(--accent), var(--main));
   text-align: center;
   margin: 2px;
   padding: 2px;
-  height: 30vh;
-  min-height: 450px;
-  min-width: 100%;
-  
+  min-width: 100%; 
 }
-main {
-  min-height: 1300px;
+main, section {
+  min-height: fit-content;
 }
-main section {
-  border: solid 2px var(--text);
-  min-height: 20vh;
-}
-
 figure img {
   height: 30vh;
   min-height: 300px;
@@ -54,14 +48,9 @@ header {
 }
 
 .card {
-  /* border-style: solid;
-  border-width: 1px;
-  border-color: var(--text); */
   padding: 10px;
   float:top;
-  width: 100%;
   flex-wrap: wrap;
-  min-height: fit-content;
 }
 
 .card header {
@@ -69,119 +58,91 @@ header {
 }
 
 .card p {
-  text-align: center;
+  text-align: left;
 }
 
-.card img, .work img {
+.card img, .work img, .larger img {
   width: 100%;
   max-width: 100vh;
-  min-width: 200px; 
+  min-height: 350px;
+  min-width: 350px;
+  background-color: var(--main);
 }
 
 .work {
-  /* border-style: solid;
-  border-width: 1px; */
   padding: 10px;
   float: left;
-  min-width: 26%;
-  max-width: 32%;
-  /* min-height:250px; */
-}
-
-.work header {
-  padding: 20px;
+  display: inline-flexbox;
+  flex-wrap: wrap;
   min-width: 200px;
+  max-width: 32%;
+  height: max-content;
+  
 }
-
-.larger header {
-  padding: 20px;
+.work:hover, .larger:hover {
+  opacity: 0.60;
 }
 
 .larger {
-  /* border-style: solid;
-  border-width: 1px; */
   padding: 10px;
   float: left;
-  min-width: 76%;
-  min-height: 300px;
+  display: inline-flexbox;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-height:200px;
+  min-width: 600px;
 }
 
 .larger img {
-  width: 90%;
-  min-height: 300px;
+  min-width: 900px;
 
 }
 
 footer {
   height: 10vh;
-  background-color: var(--accent);
-  min-height: 50px;
-  border: solid 1px var(--text);
+  background-image: linear-gradient(var(--main), var(--accent));
   min-width: 100%;
-
+  position: absolute;
+  bottom: 0;
 }
-
-footer ul li {
-text-align: end;
+.footer {
+text-align: center;
+padding: 0 5%;
 }
 
 /* Cards are split into two columns at 992px or smaller. Header, main, and footer sections stay correctly stylized. */
 @media screen and (max-width: 992px) {
-  nav {
-    background-color: var(--accent);
-    text-align: center;
-    margin: 2px;
-    padding: 2px;
-    height: 30vh;
-    min-height: 450px;
-    min-width: 100%;
-    z-index: 3;
-    
-   }
   main {
-    min-height: 1300px;
+   padding: 5px;
   }
-  .work, .larger {
-    width: 50%;
+  .work, .larger, .work img, .larger img, header {
+      width: 50%;
+      min-width: 350px;
   }
+  .work img, .larger img {
+    min-height: 350px;
+  }
+ 
   /* Change the header color */
   header {
-    background: rgb(120, 8, 151);
+    background: darkslategray;
   }
-}
-footer {
-  height: 10vh;
-  background-color: var(--accent);
-  min-height: 50px;
-  border: solid 1px var(--text);
-  min-width: 100%;
 }
 
 /* Cards are stacked on top of each other at 768px or smaller. Header, main, and footer sections stay correctly stylized. */
 @media screen and (max-width: 768px) {
- nav {
-  background-color: var(--accent);
-  text-align: center;
-  margin: 2px;
-  padding: 2px;
-  height: 30vh;
-  min-height: 600px;
-  min-width: 100%; 
- }
+
   main {
-    min-height: 3400px;
+    padding-bottom: 800px;
   }
-  .work, .larger, .card {
+  .work, .larger, .card, .work img, .larger img, header {
     width: 100%;
+    min-width: 400px;
+    padding: 5px;
   }
   /* Change the header color */
   header {
-    background: pink;
+    background: #0E1717;
   }
-}
-footer {
-  height: 10vh;
-  background-color: var(--accent);
-  min-height: 100px;
-  border: solid 1px var(--text)
+  
 }
