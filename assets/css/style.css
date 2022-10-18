@@ -37,7 +37,7 @@ nav h1 {
 
 figure img {
   height: 40vh;
-  min-height: 300px;
+  min-height: 350px;
   border: 1vh solid var(--text);
   /* Settings for my profile image. */
 }
@@ -68,9 +68,8 @@ ul li {
 
 .card img, .work img, .larger img {
   width: 100%;
-  max-width: 100vh;
-  min-height: 300px;
-  min-width: 300px;
+  height: 350px;
+  width: 350px;
   background-color: var(--main);
 }
 #Work {
@@ -110,7 +109,7 @@ header {
 }
 
 .larger img {
-  min-width: 900px;
+ width: 350px;
 }
 
 footer {
@@ -139,7 +138,10 @@ padding: 0 5%;
     width: 50%;
     min-width: 350px;
   }
- 
+ /* make zoo game image smaller  */
+ #zoo3 {
+  display: none;
+}
   /* Change the header color */
   header {
     background: darkslategray;
@@ -156,16 +158,21 @@ padding: 0 5%;
     width: 100%;
     min-width: 300px;
     padding: 20px;
+    margin: 10px;
   }
   .work img, .larger img {
     min-height: 300px;
     width: 100%;
     min-width: 300px;
   }
+  /* make zoo game image smaller  */
+  #zoo3, #zoo2 {
+    display: none;
+  }
  
   /* Change the header color */
   header, .larger header {
-    width: 100%;
+    /* width: 100%; */
     min-width: 300px;
     background: #0E1717;
   }
